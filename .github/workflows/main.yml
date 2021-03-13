@@ -22,7 +22,6 @@ jobs:
         PORT: ${{ secrets.SSH_PORT }}
         KEY: ${{ secrets.SSH_KEY }}
       with:
-        source: "dist/Recap-fe/"
+        source: "dist/Recap-fe/dist/Recap-fe/"
         target: ${{ secrets.TARGET }}
 
-        
