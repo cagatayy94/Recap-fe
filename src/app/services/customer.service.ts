@@ -3,13 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { CustomerResponseModel } from '../models/customerResponseModel';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CustomerService {
+  constructor(private httpClient: HttpClient) {}
 
-  constructor(private httpClient:HttpClient) { }
-
-  getCustomers(){
-    return this.httpClient.get<CustomerResponseModel>('https://localhost:56426/api/Customers/getallwithdetails');
+  getCustomers() {
+    return this.httpClient.get<CustomerResponseModel>(
+      'https://localhost:56426/api/Customers/getallwithdetails'
+    );
   }
 }
