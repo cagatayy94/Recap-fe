@@ -8,6 +8,6 @@ import { CarResponseModel } from '../models/carResponseModel';
 export class CarService {
   constructor(private httpClient: HttpClient) { }
   getCars(){
-    return this.httpClient.get<CarResponseModel>('https://localhost:56426/api/Cars/getcardetails')
+    return this.httpClient.get<CarResponseModel>('https://localhost:24459/api/Cars/getcardetails')
   }
 }
