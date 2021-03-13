@@ -10,7 +10,7 @@ export class CustomerService {
 
   getCustomers() {
     return this.httpClient.get<CustomerResponseModel>(
-      'https://localhost:24459/api/Customers/getallwithdetails'
+      'https://localhost:56426/api/Customers/getallwithdetails'
     );
   }
 }

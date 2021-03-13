@@ -9,7 +9,7 @@ export class RentalService {
   constructor(private httpClient: HttpClient) {}
   getRentals() {
     return this.httpClient.get<RentalResponseModel>(
-      'https://localhost:24459/api/Rentals/getallwithdetails'
+      'https://localhost:56426/api/Rentals/getallwithdetails'
     );
   }
 }
