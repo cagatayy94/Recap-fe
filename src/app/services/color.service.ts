@@ -9,7 +9,7 @@ export class ColorService {
   constructor(private httpClient: HttpClient) {}
   getColors() {
     return this.httpClient.get<ColorResponseModel>(
-      'https://localhost:56426/api/Colors/getall'
+      'https://localhost:24459/api/Colors/getall'
     );
   }
 }
