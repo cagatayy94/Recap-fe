@@ -14,6 +14,8 @@ jobs:
       run: npm install
     - name: Run build task
       run: npm run build --prod
+    - name: Change directory
+      run: cd dist/Recap-fe/
     - name: Copy file via scp
       uses: appleboy/scp-action@master
       env:
@@ -22,6 +24,6 @@ jobs:
         PORT: ${{ secrets.SSH_PORT }}
         KEY: ${{ secrets.SSH_KEY }}
       with:
-        source: "dist/Recap-fe/."
+        source: "."
         target: ${{ secrets.TARGET }}
 
