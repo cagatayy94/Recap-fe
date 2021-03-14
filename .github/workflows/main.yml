@@ -23,4 +23,4 @@ jobs:
           FOLDER: "dist/Recap-fe/"
           SERVER_IP: ${{ secrets.SSH_HOST }}
           USERNAME: ${{ secrets.SSH_USER }}
-          SERVER_DESTINATION: /var/www/html/
+          SERVER_DESTINATION: ${{ secrets.TARGET }}
