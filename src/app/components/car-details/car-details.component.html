@@ -1,0 +1,11 @@
+<h4>Detail</h4>
+<ul *ngFor="let car of cars" class="list-group">
+  <li class="list-group-item">Brand: {{ car.brandName }}</li>
+  <li class="list-group-item">Color: {{ car.colorName }}</li>
+  <li class="list-group-item">Daily Price: {{ car.dailyPrice }}</li>
+  <li class="list-group-item">Description: {{ car.description }}</li>
+  <li class="list-group-item">Model: {{ car.modelYear }}</li>
+</ul>
+<ul *ngFor="let carImage of carImages" class="list-group">
+    <img src="https://localhost:56426/images/{{ carImage.imagePath }}"class="img-thumbnail">
+</ul>
