@@ -14,6 +14,8 @@ export class BrandComponent implements OnInit {
     brandId:0,
     brandName:''
   }
+  
+  filterText:string = '';
 
   constructor(private brandService:BrandService) { }
 
