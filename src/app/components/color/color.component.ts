@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Color } from 'src/app/models/colorModel';
 import { ColorService } from 'src/app/services/color.service';
-import { BrandComponent } from '../brand/brand.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-color',
@@ -12,6 +12,7 @@ export class ColorComponent implements OnInit {
   colors: Color[] = [];
   currentColor: Color = { colorId: 0, colorName: '' };
   dataLoaded = false;
+  filterText:any = '';
 
   constructor(private colorService: ColorService) {}
 

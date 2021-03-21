@@ -2,9 +2,10 @@
 <div *ngIf="dataLoaded==false" class="spinner-border text-secondary" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
+<input type="text" class="form-control" [(ngModel)]="filterText" id="filterText" placeholder="Search">
 <ul class="list-group">
   <li 
-    *ngFor="let color of colors" 
+    *ngFor="let color of colors | colorFilterPipe:filterText" 
     (click)="setCurrentColor(color)"
     [class]="getColorClass(color)"
     [routerLink]="['/cars']"
